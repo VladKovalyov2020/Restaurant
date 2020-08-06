@@ -1,0 +1,32 @@
+@import "../../../styles/configs.scss";
+
+.about-image-card {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 48px;
+
+  &__img-wrapper {
+    height: 500px;
+    width: 900px;
+
+    @media screen and (max-width: $breakpoint-down-md) {
+      height: 400px;
+      width: 800px;
+    }
+
+    @media screen and (max-width: $breakpoint-down-sm) {
+      height: 300px;
+      width: 700px;
+    }
+
+    @media screen and (max-width: $breakpoint-down-xs) {
+      height: 250px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

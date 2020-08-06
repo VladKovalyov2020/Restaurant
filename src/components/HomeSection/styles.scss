@@ -1,0 +1,46 @@
+@import "../../styles/colors.scss";
+@import "../../styles/configs.scss";
+
+.home {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/images/home_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  h1 {
+    font-size: 90px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 60px;
+    color: $white;
+
+    @media screen and (max-width: $breakpoint-down-md) {
+      font-size: 80px;
+    }
+
+    @media screen and (max-width: $breakpoint-down-sm) {
+      font-size: 70px;
+    }
+
+    @media screen and (max-width: $breakpoint-down-xs) {
+      font-size: 60px;
+    }
+  }
+
+  &__picture-wrapper {
+    margin-bottom: 60px;
+  }
+
+  &__btn {
+    &:hover {
+      background-color: rgba(204, 204, 204, 0.27);
+    }
+  }
+}
+
+

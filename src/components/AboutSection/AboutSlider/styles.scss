@@ -1,0 +1,115 @@
+@import "../../../styles/configs.scss";
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+
+.about-slider {
+  min-height: 510px;
+  width: 89%;
+  padding: 0 64px;
+  margin: auto;
+  
+  @media screen and (max-width: $breakpoint-down-md) {
+    padding: 16px;
+    min-height: 420px;
+  }
+
+  @media screen and (max-width: $breakpoint-down-sm) {
+    padding: 0;
+    min-height: 350px;
+  }
+
+  @media screen and (max-width: $breakpoint-down-xs) {
+    padding: 0;
+    min-height: 280px;
+  }
+
+  &__slide {
+    outline: none;
+  }
+
+  .slick-arrow {
+    color: $bronze;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 232px;
+
+    @media screen and (max-width: $breakpoint-down-md) {
+      display: none;
+    }
+
+    &.slick-prev {
+      left: 8px;
+
+      &:before {
+        display: none;
+      }
+
+      .react-icon {
+        font-size: 48px;
+      }
+    }
+
+    &.slick-next {
+      right: 8px;
+
+      &:before {
+        display: none;
+      }
+
+      .react-icon {
+        font-size: 48px;
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    height: 48px;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 6px;
+      margin: 0;
+      width: 24px;
+      height: 24px;
+
+      button {
+        border: 1px solid $bronze;
+        background-color: $bronze;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0;
+        transition: transform 0.15s ease;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: transparent;
+        }
+      }
+
+      &:hover {
+        button {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}

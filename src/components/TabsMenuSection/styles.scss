@@ -1,0 +1,39 @@
+@import "../../styles/colors.scss";
+@import "../../styles/configs.scss";
+
+.menu {
+  min-height: 758px;
+  width: 100%;
+  background-image: url("../../assets/images/menu_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  @media screen and (max-width: $breakpoint-down-xs) {
+    min-height: 710px;
+  }
+
+  &__content {
+    width: 100%;
+    min-height: 650px;
+    max-width: 950px;
+    background-color: rgba(0, 0, 0, 0.67);
+    padding-top: 32px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $breakpoint-down-xs) {
+      font-size: 18px;
+      min-height: 590px;
+    }
+
+    h2 {
+      @media screen and (max-width: $breakpoint-down-xs) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

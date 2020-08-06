@@ -1,0 +1,21 @@
+@import "../../styles/configs.scss";
+
+.about {
+  min-height: 710px;
+  background-image: url("../../assets/images/about_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+  
+  @media screen and (max-width: $breakpoint-down-md) {
+    min-height: 640px;  
+  }
+
+  @media screen and (max-width: $breakpoint-down-sm) {
+    min-height: 500px; 
+  }
+
+  @media screen and (max-width: $breakpoint-down-xs) {
+    min-height: 440px; 
+  }
+}
